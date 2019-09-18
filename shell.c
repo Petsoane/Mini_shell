@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/17 08:27:59 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 15:24:44 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int		main(int ac, char **av, char **sys_env)
 {
 	char	**env;
 
+	(void)ac;
+	(void)av;
 	env = prep_env_vec(sys_env);
 	while (1)
 		if (start(env) == -1)

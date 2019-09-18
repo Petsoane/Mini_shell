@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 19:56:13 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/17 08:02:30 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 15:24:16 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 void	sigmain(int i)
 {
+	(void)i;
 	ft_putstr("int the external:");
 	ft_putstr("\n");
 }
