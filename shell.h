@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 12:07:21 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/17 08:41:54 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 17:38:27 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # define FUNCTIONS COMMANDS - 1
 # define PROMPT "$>"
 # define BUILTS "BUILTINFUNC"
+# define PATHERR "pwd: no such file or directory"
 # include "libft/libft.h"
 # include <readline/readline.h>
 # include <readline/history.h>

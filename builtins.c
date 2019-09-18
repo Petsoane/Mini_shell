@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 10:31:40 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/16 13:04:44 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 17:39:30 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,13 +74,16 @@ void	cd(char **env, char **av)
 	char	cwd[255];
 
 	i = 0;
+	path = NULL;
 	while (av[i] != NULL)
 		i++;
-	if (i == 0 || ft_strcmp(av[0], "~") == 0)
+	if (i == 0 || ft_strcmp(av[0], "~") == 0 || ft_strcmp(av[0], "-") == 0)
 	{
-		path = env_var_value(env, "HOME");
-		if (chdir(path) == -1)
-			ft_putendl("pwd: no such file direcotory exists.");
+		if (i == 0 || ft_strcmp(av[0], "~") == 0)
+			path = env_var_value(env, "HOME");
+		else if (ft_strcmp(av[0], "-") == 0)
+			path = env_var_value(env, "OLDPWD");
+		(chdir(path) == -1) ? ft_putendl(PATHERR) : 0;
 		free(path);
 	}
 	else if (chdir(av[0]) == -1)
