@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 12:07:21 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:31:49 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:56:23 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@
 # include <unistd.h>
 # include <stdio.h>
 
-typedef	void	((*functions)());
+typedef	void	((*t_functions)());
 
 int		parse_command(char **av, char **env);
-void	builtin_functions(functions *exec);
+void	builtin_functions(t_functions *exec);
 void	prep_commands(char **av);
 void	echo(char **av, char **env);
 void	cd(char **av, char **env);

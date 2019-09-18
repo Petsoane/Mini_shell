@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 10:31:40 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:19:27 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:56:41 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int		parse_command(char **av, char **env)
 {
 	static char			*commands[COMMANDS];
-	static functions	exec[FUNCTIONS];
+	static t_functions	exec[FUNCTIONS];
 	int					i;
 
 	i = 0;

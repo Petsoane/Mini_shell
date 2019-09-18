@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:39:20 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:32:21 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:56:54 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	prep_commands(char **av)
 	av[7] = NULL;
 }
 
-void	builtin_functions(functions *exec)
+void	builtin_functions(t_functions *exec)
 {
 	exec[0] = &echo;
 	exec[1] = &cd;
