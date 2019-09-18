@@ -6,7 +6,7 @@
 #    By: tcajee <tcajee@student.wethinkcode.co.za>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/29 13:11:02 by tcajee            #+#    #+#              #
-#    Updated: 2019/09/18 15:23:44 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/09/18 18:20:44 by sminnaar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 NAME		= Minshell
 
 # Project builds and dirs
-#SRCDIR		= ./srcs/
+SRCDIR		= ./srcs/
 #SRCNAMES	= $(shell ls (SRCDIR) | grep -E ".+\.c")
 SRCNAMES	= builtins.c \
 			  env_functions.c \
@@ -25,7 +25,7 @@ SRCNAMES	= builtins.c \
 			  set_env_functions.c \
 			  shell.c \
 
-#SRC			= $(addprefix $(SRCDIR), $(SRCNAMES))
+SRC			= $(addprefix $(SRCDIR), $(SRCNAMES))
 BUILDDIR	= ./build/
 BUILDOBJS	= $(addprefix $(BUILDDIR), $(SRCNAMES:.c=.o))
 

@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 15:24:44 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:20:14 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 void	run_command(char **env, char **input_split, int i)
 {

@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/13 10:37:14 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/17 08:05:56 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:20:01 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 /*
 ** This function will be used to free an array vector and its malloc'd

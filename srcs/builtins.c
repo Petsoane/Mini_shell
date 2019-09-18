@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 10:31:40 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 17:39:30 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:19:27 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 int		parse_command(char **av, char **env)
 {

@@ -6,13 +6,13 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 12:07:21 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 17:38:27 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:31:49 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SHELL_H
 # define SHELL_H
-# define COMMANDS 7
+# define COMMANDS 8
 # define FUNCTIONS COMMANDS - 1
 # define PROMPT "$>"
 # define BUILTS "BUILTINFUNC"
@@ -56,5 +56,6 @@ void	free_vector(char **vec, int size);
 void	clean_join(char **dst, char *src);
 char	**prep_env_vec(char **sys_vec);
 void	parse_env_var(char **env, char **input_split);
+void	set(char **env, char **av);
 
 #endif

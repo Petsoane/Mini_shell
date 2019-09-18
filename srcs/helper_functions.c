@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:39:20 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/16 12:54:40 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:32:21 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 int		is_builtins(char *command, char **split)
 {
@@ -31,7 +31,8 @@ void	prep_commands(char **av)
 	av[3] = "env";
 	av[4] = "unset";
 	av[5] = "which";
-	av[6] = NULL;
+	av[6] = "set";
+	av[7] = NULL;
 }
 
 void	builtin_functions(functions *exec)
@@ -42,6 +43,7 @@ void	builtin_functions(functions *exec)
 	exec[3] = &environment;
 	exec[4] = &unset_env_var;
 	exec[5] = &which;
+	exec[6] = &set;
 }
 
 void	add_var_builtins(char **env, char **commands)
@@ -64,4 +66,15 @@ void	add_var_builtins(char **env, char **commands)
 	}
 	set_env_var(env, BUILTS, path);
 	free(path);
+}
+void	set(char **env, char **av)
+{
+	int i;
+	
+	i = 0;
+	while (av[i] != NULL && valid_env_var(av[i]) == 1)
+	{
+		set_env(env, av[i]);
+		i++;
+	}
 }

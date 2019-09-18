@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 19:56:13 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:00:39 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:19:43 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 void	sigmain(int i)
 {

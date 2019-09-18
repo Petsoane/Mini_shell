@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 12:45:14 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/16 12:51:22 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:20:07 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 /*
 ** This fucntion will change environment variable or add a new one

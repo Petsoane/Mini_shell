@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 07:08:54 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/16 12:49:08 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:19:38 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 /*
 ** This function gets the position an environment variable.

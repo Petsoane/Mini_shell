@@ -6,11 +6,11 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:44:16 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/16 12:41:37 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/09/18 18:19:55 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "shell.h"
+#include "../shell.h"
 
 void	sigint(int i)
 {
