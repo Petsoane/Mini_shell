@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/19 12:32:03 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/19 12:43:17 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ int		main(int ac, char **av, char **sys_env)
 		ft_putendl(line);
 		free(line);
 	}
-	free(line);
 	env = prep_env_vec(sys_env);
 	while (1)
 		if (start(env) == -1)
