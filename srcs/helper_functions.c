@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:39:20 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:56:54 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/19 15:34:33 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,11 @@ void	add_var_builtins(char **env, char **commands)
 	set_env_var(env, BUILTS, path);
 	free(path);
 }
+
 void	set(char **env, char **av)
 {
 	int i;
-	
+
 	i = 0;
 	while (av[i] != NULL && valid_env_var(av[i]) == 1)
 	{
