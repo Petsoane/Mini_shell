@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 12:07:21 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:56:23 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/19 12:23:29 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # include <sys/wait.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <fcntl.h>
 
 typedef	void	((*t_functions)());
 

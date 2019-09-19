@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:20:14 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/19 12:28:25 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,19 @@ int		start(char **env)
 int		main(int ac, char **av, char **sys_env)
 {
 	char	**env;
+	char	*line;
+	int		fd;
 
-	//(void)ac;
-	//(void)av;
-	for (int i = 0; i < ac; i++)
-		ft_putendl(av[i]);
+	(void)ac;
+	(void)av;
+	line = NULL;
+	fd = open("./srcs/header", O_RDONLY);
+	while (get_next_line(fd, &line) > 0)
+	{
+		ft_putendl(line);
+		free(line);
+	}
+	free(line);
 	env = prep_env_vec(sys_env);
 	while (1)
 		if (start(env) == -1)
