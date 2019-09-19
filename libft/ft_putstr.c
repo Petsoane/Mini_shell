@@ -14,6 +14,6 @@
 
 void	ft_putstr(char *s)
 {
-	while (*s)
+	while (*s && *s != '"')
 		write(1, s++, 1);
 }

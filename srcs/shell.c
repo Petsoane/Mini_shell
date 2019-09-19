@@ -51,8 +51,10 @@ int		main(int ac, char **av, char **sys_env)
 {
 	char	**env;
 
-	(void)ac;
-	(void)av;
+	//(void)ac;
+	//(void)av;
+	for (int i = 0; i < ac; i++)
+		ft_putendl(av[i]);
 	env = prep_env_vec(sys_env);
 	while (1)
 		if (start(env) == -1)

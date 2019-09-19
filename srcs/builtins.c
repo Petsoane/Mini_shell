@@ -103,11 +103,14 @@ void	echo(char **env, char **av)
 	free(tmp);
 	while (*av != NULL)
 	{
-		ft_putstr(*av);
+		tmp = *av;
+		if (*tmp == '"')
+			tmp++;
+		ft_putstr(tmp);
 		ft_putstr(" ");
 		av++;
 	}
-	puts("");
+	ft_putendl("");
 }
 
 void	pwd(char **env, char **av)

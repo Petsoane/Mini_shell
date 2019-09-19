@@ -11,11 +11,10 @@
 # **************************************************************************** #
 
 # Project file
-NAME		= Minshell
+NAME		= Minishell
 
 # Project builds and dirs
 SRCDIR		= ./srcs/
-#SRCNAMES	= $(shell ls (SRCDIR) | grep -E ".+\.c")
 SRCNAMES	= builtins.c \
 			  env_functions.c \
 			  external_commands.c \
