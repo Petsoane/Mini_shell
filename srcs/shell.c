@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/19 12:44:25 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/20 09:30:05 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,19 @@ int		main(int ac, char **av, char **sys_env)
 {
 	char	**env;
 	char	*line;
-	int		fd;
+	pid_t	pid;
 
 	(void)ac;
-	(void)av;
+//	(void)av;
 	line = NULL;
-	fd = open("./srcs/header", O_RDONLY);
-	while (get_next_line(fd, &line) > 0)
-	{
-		ft_putendl(line);
-	}
 	env = prep_env_vec(sys_env);
+	pid = fork();
+	if (pid == 0)
+	{
+		execve("./header.sh", av, env);
+		exit(0);
+	}
+	wait(NULL);
 	while (1)
 		if (start(env) == -1)
 			break ;

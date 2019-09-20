@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 19:56:13 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:19:43 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/19 15:35:05 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char	*get_bin_path(char *path_var, char *bin_name)
 	char	**bin_paths;
 	int		i;
 
+	if (!path_var)
+		return (NULL);
 	bin_paths = ft_strsplit(path_var, ':');
 	i = 0;
 	while (bin_paths[i] != NULL)
