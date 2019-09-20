@@ -6,11 +6,18 @@
 #    By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/20 08:07:20 by lpetsoan          #+#    #+#              #
-#    Updated: 2019/09/05 12:43:53 by lpetsoan         ###   ########.fr        #
+#    Updated: 2019/09/20 09:39:30 by anben            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAG = -Wall -Wextra -Werror -g
+
+RED    = \033[0;31m
+GREEN  = \033[0;32m
+YELLOW = \033[0;33m
+BLUE   = \033[0;34m
+CYAN   = \033[0;36m
+NC     = \033[0m
 
 NAME = libft.a
 
@@ -83,19 +90,19 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@echo "$(NAME) created"
+	@echo "$(BLUE)$(NAME) created$(NC)"
 	@ranlib $(NAME)
-	@echo "$(NAME) indexed"
+	@echo "$(CYAN)$(NAME) indexed$(NC)"
 
 %.o: %.c
 	@gcc $(FLAG) -c $< -o $@
 
 clean:
 	@rm -f $(OBJ)
-	@echo "OBJ deleted"
+	@echo "$(RED)OBJ deleted$(NC)"
 
 fclean: clean
 	@rm -f $(NAME)
-	@echo "$(NAME) deleted"
+	@echo "$(RED)$(NAME) deleted$(NC)"
 
 re: fclean all

@@ -6,7 +6,7 @@
 #    By: tcajee <tcajee@student.wethinkcode.co.za>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/29 13:11:02 by tcajee            #+#    #+#              #
-#    Updated: 2019/09/18 18:20:44 by sminnaar         ###   ########.fr        #
+#    Updated: 2019/09/20 09:29:50 by anben            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,13 @@ SRCNAMES	= builtins.c \
 			  memory_functions.c \
 			  set_env_functions.c \
 			  shell.c \
+
+# Colors
+RED	   = \033[0;31m
+GREEN  = \033[0;32m
+YELLOW = \033[0;33m
+NC     = \033[0m
+
 
 SRC			= $(addprefix $(SRCDIR), $(SRCNAMES))
 BUILDDIR	= ./build/
@@ -42,7 +49,7 @@ all: $(BUILDDIR) $(LIBFT) $(NAME)
 
 # Object dir rule
 $(BUILDDIR):
-	@echo "Compiling: $(NAME)"
+	@echo "$(YELLOW)Compiling: $(NAME)$(NC)"
 	@mkdir -p $(BUILDDIR)
 
 # Objects rule
@@ -52,7 +59,7 @@ $(BUILDDIR)%.o:$(SRCDIR)%.c
 # Project file rule
 $(NAME): $(BUILDOBJS)
 	@$(CC) $(CFLAGS) -o $(NAME) $(BUILDOBJS) $(LIBFT) -lreadline
-	@echo "Compiled: $(NAME)"
+	@echo "$(GREEN)Compiled: $(NAME)$(NC)"
 
 # Libft rule
 $(LIBFT):
