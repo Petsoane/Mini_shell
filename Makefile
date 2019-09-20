@@ -6,7 +6,7 @@
 #    By: tcajee <tcajee@student.wethinkcode.co.za>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/29 13:11:02 by tcajee            #+#    #+#              #
-#    Updated: 2019/09/20 09:29:50 by anben            ###   ########.fr        #
+#    Updated: 2019/09/20 12:22:04 by anben            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,9 @@ SRCNAMES	= builtins.c \
 			  memory_functions.c \
 			  set_env_functions.c \
 			  shell.c \
+
+# Progress bar
+LOAD = ./load.sh
 
 # Colors
 RED	   = \033[0;31m
@@ -49,7 +52,8 @@ all: $(BUILDDIR) $(LIBFT) $(NAME)
 
 # Object dir rule
 $(BUILDDIR):
-	@echo "$(YELLOW)Compiling: $(NAME)$(NC)"
+	@echo "$(YELLOW)Compiling: $(NAME)"
+	@bash $(LOAD)
 	@mkdir -p $(BUILDDIR)
 
 # Objects rule
