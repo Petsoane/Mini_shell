@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/16 11:39:20 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/19 15:34:33 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/20 15:55:36 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	prep_commands(char **av)
 	av[1] = "cd";
 	av[2] = "pwd";
 	av[3] = "env";
-	av[4] = "unset";
+	av[4] = "unsetenv";
 	av[5] = "which";
-	av[6] = "set";
+	av[6] = "setenv";
 	av[7] = NULL;
 }
 

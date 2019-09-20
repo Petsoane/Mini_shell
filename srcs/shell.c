@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/20 09:30:05 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/20 15:57:02 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int		start(char **env)
 
 	i = 0;
 	input_split = get_input(env);
+	while (!input_split[0])
+		input_split = get_input(env);
 	if (ft_strcmp(*input_split, "exit") == 0)
 	{
 		free_vector(input_split, env_var_count(input_split));
@@ -54,13 +56,12 @@ int		main(int ac, char **av, char **sys_env)
 	pid_t	pid;
 
 	(void)ac;
-//	(void)av;
 	line = NULL;
 	env = prep_env_vec(sys_env);
 	pid = fork();
 	if (pid == 0)
 	{
-		execve("./header.sh", av, env);
+		execve("./scripts/header.sh", av, env);
 		exit(0);
 	}
 	wait(NULL);

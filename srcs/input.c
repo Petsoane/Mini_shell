@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:44:16 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/18 18:19:55 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/09/20 15:55:42 by sminnaar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,18 @@ char	**get_input(char **env)
 
 	signal(SIGINT, sigint);
 	ft_putstr(PROMPT);
-	while (ft_strcmp((input = readline("\b\b$>")), "") == 0)
-	{
-		ft_putstr(PROMPT);
-		free(input);
+	i_split = NULL;
+	if (ft_strsplit((input = readline("\b\b$>")), ' ') == NULL)
+	{	
+		if (i_split)
+			free(i_split);
+		return (NULL);
 	}
+//	while (ft_strcmp((input = readline("\b\b$>")), "") == 0)
+//	{
+//		ft_putstr(PROMPT);
+//		free(input);
+//	}
 	add_history(input);
 	i_split = ft_strsplit(input, ' ');
 	parse_env_var(env, i_split);
