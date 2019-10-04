@@ -104,7 +104,7 @@ void	echo(char **env, char **av)
 	while (*av != NULL)
 	{
 		tmp = *av;
-		if (*tmp == '"')
+		if (*tmp == '"' || *tmp == 39)
 			tmp++;
 		ft_putstr(tmp);
 		ft_putstr(" ");

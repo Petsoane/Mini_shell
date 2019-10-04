@@ -38,6 +38,8 @@ char	**get_input(char **env)
 	{	
 		if (i_split)
 			free(i_split);
+		if (input)
+			free(input);
 		return (NULL);
 	}
 //	while (ft_strcmp((input = readline("\b\b$>")), "") == 0)
