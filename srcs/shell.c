@@ -31,9 +31,7 @@ int		start(char **env)
 
 	i = 0;
 	while ((input_split = get_input(env)) && !input_split[0])
-	{
 		free(input_split);
-	}
 	if (ft_strcmp(*input_split, "exit") == 0)
 	{
 		free_vector(input_split, env_var_count(input_split));
