@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/05 14:44:16 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/10/07 11:02:06 by lpetsoan         ###   ########.fr       */
+/*   Updated: 2019/11/10 10:27:59 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	sigint(int i)
 
 /*
 ** This Function will handle all the input processsing.
-** Migt also handle the autocomplete, history, and other fuctionalities.
+** might also handle the autocomplete, history, and other fuctionalities.
 */
 
 char	**get_input(char **env)
@@ -34,14 +34,6 @@ char	**get_input(char **env)
 	signal(SIGINT, sigint);
 	ft_putstr(PROMPT);
 	i_split = NULL;
-//	if (ft_strsplit((input = readline("\b\b$>")), ' ') == NULL)
-//	{	
-//		if (i_split)
-//			free(i_split);
-//		if (input)
-//			free(input);
-//		return (NULL);
-//	}
 	while (ft_strcmp((input = readline("\b\b$>")), "") == 0)
 	{
 		ft_putstr(PROMPT);

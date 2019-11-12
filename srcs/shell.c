@@ -6,7 +6,7 @@
 /*   By: lpetsoan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:14:07 by lpetsoan          #+#    #+#             */
-/*   Updated: 2019/09/20 15:57:02 by sminnaar         ###   ########.fr       */
+/*   Updated: 2019/11/10 11:08:33 by lpetsoan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,20 @@ void	run_command(char **env, char **input_split, int i)
 		free(input_split[i++]);
 }
 
+/*
+** This is just a norm addition, to handle the shell processes.
+*/
+
 int		start(char **env)
 {
 	int		i;
 	char	**input_split;
 
 	i = 0;
-	input_split = get_input(env);
-	while (!input_split[0])
-		input_split = get_input(env);
+	while ((input_split = get_input(env)) && !input_split[0])
+	{
+		free(input_split);
+	}
 	if (ft_strcmp(*input_split, "exit") == 0)
 	{
 		free_vector(input_split, env_var_count(input_split));
